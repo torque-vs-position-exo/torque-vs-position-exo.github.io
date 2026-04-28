@@ -32,16 +32,22 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="icon" href="./static/images/icon.png">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)'], ['$', '$']] }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
-
+<!-- 
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
@@ -71,7 +77,7 @@
     </div>
 
   </div>
-</nav>
+</nav> -->
 
 
 <section class="hero">
@@ -98,7 +104,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
+                <a href="https://drive.google.com/file/d/1rUXPvov2Fu93H9MlvcyHDgDXiH_XmqV3/view?usp=sharing"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -107,7 +113,7 @@
                 </a>
               </span>
               <!-- Video Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -115,10 +121,10 @@
                   </span>
                   <span>Video</span>
                 </a>
-              </span>
+              </span> -->
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+                <a href="https://drive.google.com/drive/folders/1zKN8vFZVlej2Ayk1yUgdxw8cJ835g-CX?usp=drive_link"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -128,7 +134,7 @@
               </span>
               <!-- Dataset Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                <a href="https://drive.google.com/drive/folders/1_q1B-uHV34Zjl7xIhC60BnFeeZgt_HWx?usp=drive_link"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
@@ -147,79 +153,19 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
+      <div class="video-rounded">
+        <video id="teaser" autoplay muted loop playsinline>
+          <source src="./static/videos/pos_vs_tq_slomo_cropped.mp4" type="video/mp4">
+        </video>
+      </div>
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
+        A direct comparison of torque and position control for bilateral ankle exoskeleton assistance under equivalent average stance-phase ankle kinematics.
       </h2>
     </div>
   </div>
 </section>
 
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="section">
+<section class="section has-background-light">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
@@ -231,42 +177,53 @@
             using either torque control, where per-stride joint torques are
             specified and kinematics emerge through user-device interaction,
             or position control, in which joint kinematics are specified and
-            torques emerge. 
-          </p>
-          <p>
-            Here, we compare these strategies in an ankle
+            torques emerge. Here, we compare these strategies in an ankle
             exoskeleton with ten experienced exoskeleton users. Participants
-            first walked using a torque control profile previously shown
-            to substantially reduce metabolic rate. They then walked with
-            position control that enforced the ankle kinematics measured
-            in the torque control trial. 
-          </p>
-          <p>
-            We found that, despite matched
+            first walked using a torque control profile previously shown to
+            substantially reduce metabolic rate. Using the measured stance
+            phase kinematics from torque control, participants next walked
+            with position control, which enforced the same kinematics as
+            a function of percent stance. We found that, despite matched
             kinematics, kinetics differed: peak exoskeleton torque was 50%
             greater and occurred 10% later in stance with torque control
             than with position control. The metabolic rate reduction relative
             to walking in the device unpowered was 22% for torque control
-            and 8%for position control. Step time variability was 27% larger
+            and 8% for position control. Step time variability was 27% larger
             with torque control versus position control. Most participants (7
             of 10) preferred the position controller, reporting differences in
             perceived comfort but not effort. Even with matched kinematics,
             position and torque control interact with users in ways that result
             in significant differences in kinetics, energy economy, balance,
-            and comfort.
+            and comfort, and both controllers offer potential benefits that
+            merit further study.
           </p>
         </div>
       </div>
     </div>
+  </div>
+</section>
     <!--/ Abstract. -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Methods figure. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Methods</h2>
+        <figure style="display: flex; justify-content: center;">
+          <img src="./static/images/fig1_overview-1.png" alt="Methods overview figure" style="width: 70%; height: auto; display: block;">
+        </figure>
+      </div>
+    </div>
+    <!--/ Methods figure. -->
 
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
         <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <video id="combined" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/pos_vs_tq_combined.mp4"
+                type="video/mp4">
+      </video>
         </div>
       </div>
     </div>
@@ -275,159 +232,164 @@
 </section>
 
 
-<section class="section">
+<section class="section has-background-light">
   <div class="container is-max-desktop">
-
     <div class="columns is-centered">
 
-      <!-- Visual Effects. -->
       <div class="column">
         <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
+          <h2 class="title is-4 has-text-centered">Torque Controller</h2>
+
+          <p class="equation has-text-centered">
+            \[
+            \dot{\theta}^{motor}_{des} = k_P \cdot e + k_D \cdot \dot{e} + u_{learn}(i_{stride} + D)
+            \]
           </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
+
+          <p class="is-size-6">
+            Exoskeleton torque was prescribed as a phase-based profile:
+            proportional term $k_P \cdot e$ corrected current error, derivative
+            term $k_D \cdot\dot{e}$ reacted to error changes, and feedforward learning 
+            term $u_{learn}(i_{stride} + D)$ improve tracking using past errors. 
+            Learning term was offset by delay $D$ to account for transmission latency, and 
+            was updated each step as $u_{learn}(i_{stance}) \xleftarrow{} u_{learn}(i_{stance}) 
+            \cdot \beta + k_L \cdot e$, with forgetting factor $\beta = 0.99$.
+            Gains $k_P$, $k_D$, and $k_L$ were set empirically.            
+          </p>
         </div>
       </div>
-      <!--/ Visual Effects. -->
 
-      <!-- Matting. -->
       <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
+        <div class="content">
+          <h2 class="title is-4 has-text-centered">Position Controller</h2>
 
-        </div>
-      </div>
-    </div>
-    <!--/ Matting. -->
+          <p class="equation has-text-centered">
+            \[
+            \theta^{motor}_{des} = f_{nominal}(\theta^{ankle}_{des}) + k_P \cdot e + \alpha \cdot u_{learn}(i_{stride} + D)
+            \]
+          </p>
 
-    <!-- Animation. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
-
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
-        <div class="content has-text-justified">
-          <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
+          <p class="is-size-6">
+            Ankle angle was prescribed as a phase-varying trajectory:
+            nominal mapping $f_{nominal}(\theta^{ankle}_{des})$ empirically mapped desired ankle angle to motor position, 
+            proportional term $k_P \cdot e$ corrected current error, and scaled learning term $\alpha \cdot u_{learn}(i_{stride} + D)$ improved tracking as in the torque controller, 
+            with scalar $\alpha$ ramping from 0 to 1 over the first 20% of stance to limit instability at heel strike and applied torque before foot-flat.
           </p>
         </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Results</h2>
+
+        <h3 class="title is-4">Kinematics / Kinetics</h3>
+        <div class="content has-text-centered">
+          <figure style="display: flex; justify-content: center;">
+            <img src="./static/images/fig2_kin-1.png" alt="Kinematics / Kinetics results figure" style="width: 80%; height: auto; display: block;">
+          </figure>
+          <p>
+            Despite matched kinematics, peak torque applied when walking in torque control is 50.3% higher than when walking in position control, and occurs 10.5% later in stance.
+            Torque control exhibited greater range of motion, torque magnitude, and post-toe-off joint velocity.
+          </p>
+
         </div>
         <br/>
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
+        
+        <h3 class="title is-4">Metabolic Rate Outcomes</h3>
+        <div class="columns is-vcentered">
+          <div class="column is-one-third">
+            <figure style="display: flex; justify-content: center;">
+              <img src="./static/images/fig3_met-1.png" alt="Metabolic Rate overall results figure" style="width: 100%; height: auto; display: block;">
+            </figure>
+          </div>
+          <div class="column is-two-thirds">
+            <div class="content has-text-justified">
+              <figure style="display: flex; justify-content: center;">
+                <img src="./static/images/fig4_correlations_horizontal.png" alt="Metabolic Rate overall results figure" style="width: 100%; height: auto; display: block;">
+              </figure>
+            </div>
+          </div>
         </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Re-rendering. -->
 
+        <p>
+          Participants' survey responses indicated a preference for position control despite smaller metabolic rate reductions.
+          suggesting that factors beyond energy economy contribute to user preference.
+          One likely contributor is stability: position
+          control resulted in lower variability, which may have
+          been perceived as less destabilizing. Predictability may also
+          play a role, as the position controller delivers torque as a
+          function of joint position, which may be more intuitive than
+          torque control delivering torque based on time since heel
+          strike.
+
+        </p>
+
+        <br/>
+        <br/>
+
+        <h3 class="title is-4">User Preference</h3>
+        <div class="columns is-vcentered">
+          <div class="column is-three-fifths">
+            <figure style="display: flex; justify-content: center;">
+              <img src="./static/images/fig5_survey-1.png" alt="Metabolic Rate overall results figure" style="width: 100%; height: auto; display: block;">
+            </figure>
+          </div>
+          <div class="column is-two-fifths">
+            <div class="content has-text-justified">
+              <figure style="display: flex; justify-content: center;">
+                <img src="./static/images/fig6_variability-1.png" alt="Metabolic Rate overall results figure" style="width: 100%; height: auto; display: block;">
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <p>
+          On average, the metabolic rate reduction with position
+          control was approximately one-third that with torque control,
+          and torque control yielded greater reductions in nearly all
+          individuals.  Participants who experienced
+          larger metabolic rate reductions with torque control also had larger reductions with position control. 
+          Participants walking with position control did not modify their gait to generate larger exoskeleton torques even though doing so appeared
+          possible with this controller, and such larger torques would likely have led to a larger metabolic rate reduction.
+
+        </p>
+
+        <br/>
       </div>
     </div>
-    <!--/ Animation. -->
-
-
-    <!-- Concurrent Work. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Concurrent Work. -->
-
-  </div>
 </section>
 
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{martin2026tqvspos,
+    <div style="position: relative;">
+      <button class="button is-small is-light" id="copy-bibtex" style="position: absolute; top: 0; right: 0;">
+        <span class="icon is-small">
+          <i class="fas fa-copy"></i>
+        </span>
+        <span>Copy</span>
+      </button>
+      <pre><code id="bibtex-code">@article{martin2026tqvspos,
   author    = {Martin, Russell M. and Punamiya, Rohan S. and Collins, Steven H.},
   title     = {Controlling Torque Versus Position: A Direct Comparison of Ankle Exoskeleton Assistance Strategies},
   journal   = {TMRB},
   year      = {2026},
 }</code></pre>
+    </div>
   </div>
 </section>
 
 
 <footer class="footer">
   <div class="container">
-    <div class="content has-text-centered">
+    <!-- <div class="content has-text-centered">
       <a class="icon-link"
          href="./static/videos/nerfies_paper.pdf">
         <i class="fas fa-file-pdf"></i>
@@ -435,7 +397,7 @@
       <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
-    </div>
+    </div> -->
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
@@ -448,6 +410,20 @@
     </div>
   </div>
 </footer>
+
+<script>
+  document.getElementById('copy-bibtex').addEventListener('click', function() {
+    const text = document.getElementById('bibtex-code').textContent;
+    navigator.clipboard.writeText(text).then(() => {
+      const btn = this;
+      const originalHTML = btn.innerHTML;
+      btn.innerHTML = '<span class="icon is-small"><i class="fas fa-check"></i></span><span>Copied!</span>';
+      setTimeout(() => {
+        btn.innerHTML = originalHTML;
+      }, 2000);
+    });
+  });
+</script>
 
 </body>
 </html>
